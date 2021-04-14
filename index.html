@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang='it'>
+	<head>
+		<title>Michela Cerro</title>
+
+		<meta charset='utf-8'/>
+		<meta name='author' content='Michela Cerro'>
+		<meta name='descrition' content='HTML portfolio website'>
+		<meta name='keywords' content='portfolio html css'>
+		<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'/>
+
+		<link rel='stylesheet' href='assets/css/style.css'/>
+		<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,600;1,400&family=Satisfy&display=swap" rel="stylesheet"/>
+
+		<script src='https://code.jquery.com/jquery-3.2.1.js'></script>
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.21/jquery.scrollify.min.js'></script>
+
+	<body>
+		<section id='page1' class='pages'>
+			<a name='bio'></a>
+
+			<div id='list' style='display:none'>
+				<div id='options-block'>
+					<p class='option'><a href='#bio'>Chi sono</a></p>
+					<hr>
+					<p class='option'><a href='#skills'>Competenze</a></p>
+					<hr>
+					<p class='option'><a href='#contacts'>Contatti</a></p>
+				</div>
+			</div>
+			<button id='nav-menu'>
+				<img src='assets/img/menu.png' id='menu-icon'>
+			</button>
+
+			<img id='photo' src='assets/img/me.jpeg'/>
+			<p><b><span class='cursive-text'>Ciao, benvenuto!</span></b></br></br>
+
+				Mi chiamo Michela Cerro e sono una <span class='colored-text'>Full	Stack Development	Student</span>.<br>
+				Mi piace la scienza, in particolare quella bio-medica, leggere e camminare.<br><br>
+
+				Ho una laurea in fisioterapia e attualmente lavoro come libera professionista.<br>
+				Sono curiosa verso quello che non conosco, anche se ciò mi intriga e spaventa allo stesso tempo. Ed è proprio a causa di questa
+				mia doppia anima che solo ultimamente ho trovato il coraggio di mettermi in gioco e provare ad approcciarmi	al campo informatico;
+				un mondo che pensavo non potesse fare per me e invece mi sta sorprendendo.<br></p>
+		</section>
+
+		<section id='page2' class='pages'>
+			<a name='skills'></a>
+			<div id='hard-skills' class='skills-box'>
+				<div id='contents'>
+					<h1 class='cursive-text'>Hard skills</h1></br>
+					<ul>
+						<li>HTML</li>
+						<li>CSS</li>
+						<li>Bootstrap</li>
+						<li>JavaScript</li>
+						<li>jQuery</li>
+					</ul></br>
+				</div>
+
+				<div id='logos'>
+					<div class='row'>
+						<img class='logo-icons' src='assets/img/html.png'/>
+						<img class='logo-icons' src='assets/img/css.png'/>
+						<img class='logo-icons' src='assets/img/js.png'/>
+					</div>
+					<div class='row'>
+						<img class='logo-icons' src='assets/img/bootstrap.png'/>
+						<img class='logo-icons' src='assets/img/jquery.png'/>
+					</div>
+				</div>
+			</div>
+
+			<div id='secondary-skills'>
+				<div id='soft-skills' class='skills-box'>
+					<h1 class='cursive-text'>Soft skills</h1></br>
+					<ul>
+						<li>Competenze realzionali</li>
+						<li>Lavoro in team</li>
+						<li>Capacità organizzative e di autogestione</li>
+						<li>Abilità di problem solving</li>
+					</ul>
+				</div>
+
+				<div id='languages' class='skills-box'>
+					<h1 class='cursive-text'>Lingue</h1></br>
+					<ul>
+						<li><b>Italiano</b>: madrelingua</li>
+						<li><b>Inglese</b>: B2</li>
+						<li><b>Francese</b>: B2</li>
+						<li><b>Spagnolo</b>: A2</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<div class='pages'>
+			<section id='page3'>
+				<a name='contacts'></a>
+				<p>Vuoi parlarmi? Contattami!</p>
+
+				<div id='contacts'>
+					<form action="https://formspree.io/f/xjvjvqjn" method="post">
+		  			<label for="name">Name</label>
+						<input name='name' placeholder='Name' class='input-form'>
+						<label for='email'>Email</label>
+		  			<input name='email' type='email' placeholder='Email' class='input-form'>
+						<label for='message'>Message</label>
+						<textarea name='message' placeholder='Type a message...' class='input-form'></textarea>
+				  	<button type="submit" id ='submit'>Send</button>
+					</form>
+
+					<div id='icons'>
+						<a href='mailto:michelacerro@gmail.com' target=”_blank”><img src='assets/img/email.png' class='social-icons'></a>
+						<a href='https://www.linkedin.com/in/michela-cerro-877b46173/' target=”_blank”><img src='assets/img/linkedin.png' class='social-icons'></a>
+						<a href='https://github.com/michelacerro' target="_blanck"><img src='assets/img/github.png' class='social-icons'></a>
+					</div>
+				</div>
+			</section>
+
+			<footer>
+				<p>&copy; Michela Cerro, 2021</p>
+			</footer>
+		</div>
+
+		<script>
+			$(document).ready(function(){
+				$('#nav-menu').click(function(){
+					$('#list').slideToggle(800, 'swing');
+				});
+				$('.option>a').click(function(){
+					$('#list').hide();
+				});
+			});
+
+			$(function() {
+				$.scrollify({
+					section : ".pages",
+				});
+			});
+		</script>
+	</body>
+</html>
