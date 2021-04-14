@@ -1,2 +1,3 @@
-# my-site-corrected-version
-HTML portfolio
+# HTML portfolio website
+Project for start2impact
+Corrected version
